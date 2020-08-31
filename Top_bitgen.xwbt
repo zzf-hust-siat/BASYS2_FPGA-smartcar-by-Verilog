@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\smartcar\Top.ncd
+OUTFILE=E:\smartcar\Top.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=E:\smartcar
+LICENSE=WebPack
+USER_INFO=__0_0_0

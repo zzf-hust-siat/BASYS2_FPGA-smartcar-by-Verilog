@@ -1,0 +1,5 @@
+verilog work "PWM.v"
+verilog work "HongWai.v"
+verilog work "ChaoShengBo.v"
+verilog work "Bluetooth.v"
+verilog work "Top.v"

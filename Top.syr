@@ -1,0 +1,785 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\smartcar\PWM.v" into library work
+Parsing module <PWM>.
+Analyzing Verilog file "E:\smartcar\HongWai.v" into library work
+Parsing module <HongWai>.
+Analyzing Verilog file "E:\smartcar\ChaoShengBo.v" into library work
+Parsing module <ChaoShengBo>.
+WARNING:HDLCompiler:751 - "E:\smartcar\ChaoShengBo.v" Line 35: Redeclaration of ansi port En is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\ChaoShengBo.v" Line 39: Redeclaration of ansi port En_negedge is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\ChaoShengBo.v" Line 41: Redeclaration of ansi port En_tag is not allowed
+Analyzing Verilog file "E:\smartcar\Bluetooth.v" into library work
+Parsing module <Bluetooth>.
+WARNING:HDLCompiler:751 - "E:\smartcar\Bluetooth.v" Line 34: Redeclaration of ansi port seg_data is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Bluetooth.v" Line 36: Redeclaration of ansi port seg_slect is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Bluetooth.v" Line 37: Redeclaration of ansi port bl_En is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Bluetooth.v" Line 38: Redeclaration of ansi port bl_ctr is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Bluetooth.v" Line 39: Redeclaration of ansi port Rx is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Bluetooth.v" Line 40: Redeclaration of ansi port Tx is not allowed
+Analyzing Verilog file "E:\smartcar\Top.v" into library work
+Parsing module <Top>.
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 41: Redeclaration of ansi port pwm_left_out is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 42: Redeclaration of ansi port pwm_right_out is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 43: Redeclaration of ansi port ctr_dir_out is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 44: Redeclaration of ansi port led is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 45: Redeclaration of ansi port hwsignal is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 46: Redeclaration of ansi port leds_hw is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 50: Redeclaration of ansi port Trig is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 54: Redeclaration of ansi port seg_slect is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 55: Redeclaration of ansi port Rx is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 56: Redeclaration of ansi port data is not allowed
+WARNING:HDLCompiler:751 - "E:\smartcar\Top.v" Line 58: Redeclaration of ansi port En_tag is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top>.
+
+Elaborating module <PWM>.
+WARNING:HDLCompiler:413 - "E:\smartcar\PWM.v" Line 90: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "E:\smartcar\PWM.v" Line 106: Result of 21-bit expression is truncated to fit in 20-bit target.
+
+Elaborating module <HongWai>.
+
+Elaborating module <ChaoShengBo>.
+WARNING:HDLCompiler:413 - "E:\smartcar\ChaoShengBo.v" Line 70: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "E:\smartcar\ChaoShengBo.v" Line 87: Result of 25-bit expression is truncated to fit in 24-bit target.
+
+Elaborating module <Bluetooth>.
+WARNING:HDLCompiler:413 - "E:\smartcar\Bluetooth.v" Line 62: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "E:\smartcar\Bluetooth.v" Line 107: Result of 25-bit expression is truncated to fit in 24-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "E:\smartcar\Top.v".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Top> synthesized.
+
+Synthesizing Unit <PWM>.
+    Related source file is "E:\smartcar\PWM.v".
+    Found 20-bit register for signal <right>.
+    Found 4-bit register for signal <ctr_dir_out>.
+    Found 20-bit register for signal <countleft>.
+    Found 1-bit register for signal <pwm_left_out>.
+    Found 20-bit register for signal <countright>.
+    Found 1-bit register for signal <pwm_right_out>.
+    Found 20-bit register for signal <left>.
+    Found 20-bit adder for signal <countleft[19]_GND_2_o_add_8_OUT> created at line 90.
+    Found 20-bit adder for signal <countright[19]_GND_2_o_add_14_OUT> created at line 106.
+    Found 8x44-bit Read Only RAM for signal <_n0047>
+    Found 20-bit comparator lessequal for signal <n0007> created at line 91
+    Found 20-bit comparator greater for signal <n0009> created at line 98
+    Found 20-bit comparator lessequal for signal <n0015> created at line 107
+    Found 20-bit comparator greater for signal <n0017> created at line 114
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  86 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <PWM> synthesized.
+
+Synthesizing Unit <HongWai>.
+    Related source file is "E:\smartcar\HongWai.v".
+    Found 3-bit register for signal <ctr>.
+    Found 2-bit register for signal <leds_hw>.
+    Found 4x3-bit Read Only RAM for signal <hwsignal[1]_GND_3_o_wide_mux_3_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+Unit <HongWai> synthesized.
+
+Synthesizing Unit <ChaoShengBo>.
+    Related source file is "E:\smartcar\ChaoShengBo.v".
+    Found 1-bit register for signal <Trig>.
+    Found 24-bit register for signal <keep_obstacle_time>.
+    Found 24-bit register for signal <timecount>.
+    Found 2-bit register for signal <Echo_temp>.
+    Found 1-bit register for signal <En>.
+    Found 3-bit register for signal <ctr>.
+    Found 2-bit register for signal <temp>.
+    Found 1-bit register for signal <En_negedge>.
+    Found 1-bit register for signal <tag>.
+    Found 1-bit register for signal <count_tag>.
+    Found 32-bit register for signal <count_total>.
+    Found 32-bit register for signal <turnleft_count>.
+    Found 1-bit register for signal <En_tag>.
+    Found 32-bit register for signal <tag_count>.
+    Found 24-bit register for signal <count>.
+    Found 24-bit adder for signal <count[23]_GND_4_o_add_1_OUT> created at line 70.
+    Found 24-bit adder for signal <timecount[23]_GND_4_o_add_7_OUT> created at line 87.
+    Found 32-bit adder for signal <count_total[31]_GND_4_o_add_19_OUT> created at line 119.
+    Found 32-bit adder for signal <turnleft_count[31]_GND_4_o_add_23_OUT> created at line 124.
+    Found 32-bit adder for signal <turnleft_count[31]_GND_4_o_add_27_OUT> created at line 130.
+    Found 32-bit adder for signal <turnleft_count[31]_GND_4_o_add_32_OUT> created at line 136.
+    Found 32-bit adder for signal <tag_count[31]_GND_4_o_add_40_OUT> created at line 153.
+    Found 24-bit comparator greater for signal <n0001> created at line 71
+    Found 24-bit comparator lessequal for signal <n0011> created at line 94
+    Found 24-bit comparator lessequal for signal <n0016> created at line 101
+    Found 24-bit comparator lessequal for signal <n0018> created at line 101
+    Found 32-bit comparator lessequal for signal <n0033> created at line 122
+    Found 32-bit comparator greater for signal <GND_4_o_turnleft_count[31]_LessThan_23_o> created at line 122
+    Found 32-bit comparator lessequal for signal <n0041> created at line 128
+    Found 32-bit comparator lessequal for signal <n0047> created at line 134
+    Found 32-bit comparator greater for signal <GND_4_o_turnleft_count[31]_LessThan_32_o> created at line 134
+    Found 32-bit comparator greater for signal <n0055> created at line 140
+    Found 32-bit comparator greater for signal <n0068> created at line 156
+    Found 32-bit comparator greater for signal <n0075> created at line 164
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred 181 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <ChaoShengBo> synthesized.
+
+Synthesizing Unit <Bluetooth>.
+    Related source file is "E:\smartcar\Bluetooth.v".
+WARNING:Xst:2935 - Signal 'seg_slect', unconnected in block 'Bluetooth', is tied to its initial value (11111110).
+WARNING:Xst:2935 - Signal 'Tx', unconnected in block 'Bluetooth', is tied to its initial value (0).
+    Found 20-bit register for signal <fp>.
+    Found 1-bit register for signal <data<7>>.
+    Found 1-bit register for signal <data<6>>.
+    Found 1-bit register for signal <data<5>>.
+    Found 1-bit register for signal <data<4>>.
+    Found 1-bit register for signal <data<3>>.
+    Found 1-bit register for signal <data<2>>.
+    Found 1-bit register for signal <data<1>>.
+    Found 1-bit register for signal <data<0>>.
+    Found 24-bit register for signal <seg_fp>.
+    Found 1-bit register for signal <seg_fp_clk>.
+    Found 8-bit register for signal <seg_data>.
+    Found 3-bit register for signal <bl_ctr>.
+    Found 1-bit register for signal <bl_En>.
+    Found 1-bit register for signal <EnRead>.
+    Found 20-bit adder for signal <fp[19]_GND_5_o_add_2_OUT> created at line 62.
+    Found 24-bit adder for signal <seg_fp[23]_GND_5_o_add_19_OUT> created at line 107.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  66 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <Bluetooth> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x3-bit single-port Read Only RAM                     : 1
+ 8x44-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 11
+ 20-bit adder                                          : 3
+ 24-bit adder                                          : 3
+ 32-bit adder                                          : 5
+# Registers                                            : 30
+ 1-bit register                                        : 11
+ 2-bit register                                        : 3
+ 20-bit register                                       : 3
+ 24-bit register                                       : 4
+ 3-bit register                                        : 3
+ 32-bit register                                       : 3
+ 44-bit register                                       : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 16
+ 20-bit comparator greater                             : 2
+ 20-bit comparator lessequal                           : 2
+ 24-bit comparator greater                             : 1
+ 24-bit comparator lessequal                           : 3
+ 32-bit comparator greater                             : 5
+ 32-bit comparator lessequal                           : 3
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 8
+ 20-bit 2-to-1 multiplexer                             : 1
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 7
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <En> in Unit <csb> is equivalent to the following FF/Latch, which will be removed : <temp_0> 
+
+Synthesizing (advanced) Unit <Bluetooth>.
+The following registers are absorbed into counter <seg_fp>: 1 register on signal <seg_fp>.
+The following registers are absorbed into counter <fp>: 1 register on signal <fp>.
+Unit <Bluetooth> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ChaoShengBo>.
+The following registers are absorbed into counter <timecount>: 1 register on signal <timecount>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <ChaoShengBo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <HongWai>.
+INFO:Xst:3231 - The small RAM <Mram_hwsignal[1]_GND_3_o_wide_mux_3_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hwsignal>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <HongWai> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PWM>.
+The following registers are absorbed into counter <countright>: 1 register on signal <countright>.
+The following registers are absorbed into counter <countleft>: 1 register on signal <countleft>.
+INFO:Xst:3231 - The small RAM <Mram__n0047> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 44-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ctr>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <PWM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x3-bit single-port distributed Read Only RAM         : 1
+ 8x44-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 10
+ 20-bit adder                                          : 3
+ 24-bit adder                                          : 2
+ 32-bit adder                                          : 5
+# Counters                                             : 6
+ 20-bit up counter                                     : 3
+ 24-bit up counter                                     : 3
+# Registers                                            : 206
+ Flip-Flops                                            : 206
+# Comparators                                          : 16
+ 20-bit comparator greater                             : 2
+ 20-bit comparator lessequal                           : 2
+ 24-bit comparator greater                             : 1
+ 24-bit comparator lessequal                           : 3
+ 32-bit comparator greater                             : 5
+ 32-bit comparator lessequal                           : 3
+# Multiplexers                                         : 81
+ 1-bit 2-to-1 multiplexer                              : 72
+ 20-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <En> in Unit <ChaoShengBo> is equivalent to the following FF/Latch, which will be removed : <temp_0> 
+WARNING:Xst:1293 - FF/Latch <ctr_dir_out_0> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ctr_dir_out_1> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <ctr_dir_out_2> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <right_13> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <right_14> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <right_15> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <right_16> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <right_17> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <right_18> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <left_13> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <left_14> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <left_15> has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <right_6> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <right_12> 
+INFO:Xst:2261 - The FF/Latch <right_10> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_10> 
+INFO:Xst:2261 - The FF/Latch <ctr_dir_out_3> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <right_19> 
+INFO:Xst:2261 - The FF/Latch <right_0> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_0> 
+INFO:Xst:2261 - The FF/Latch <left_6> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_12> 
+INFO:Xst:2261 - The FF/Latch <right_3> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_3> 
+INFO:Xst:2261 - The FF/Latch <right_4> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_4> 
+INFO:Xst:2261 - The FF/Latch <left_16> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_18> 
+INFO:Xst:2261 - The FF/Latch <left_17> in Unit <PWM> is equivalent to the following FF/Latch, which will be removed : <left_19> 
+
+Optimizing unit <Top> ...
+
+Optimizing unit <ChaoShengBo> ...
+
+Optimizing unit <PWM> ...
+
+Optimizing unit <Bluetooth> ...
+WARNING:Xst:1293 - FF/Latch <pwm/countright_17> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm/countright_18> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm/countright_19> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm/countleft_17> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm/countleft_18> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm/countleft_19> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/turnleft_count_28> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/turnleft_count_29> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/turnleft_count_30> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/turnleft_count_31> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/count_total_30> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/count_total_31> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/tag_count_26> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/tag_count_27> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/tag_count_28> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/tag_count_29> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/tag_count_30> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <csb/tag_count_31> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_4> in Unit <Top> is equivalent to the following 2 FFs/Latches, which will be removed : <pwm/countright_4> <bt/seg_fp_4> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_5> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_5> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_6> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_6> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_7> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_7> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_8> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_8> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_9> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_9> 
+INFO:Xst:2261 - The FF/Latch <csb/tag> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <csb/count_tag> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_10> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_10> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_11> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_11> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_12> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_12> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_13> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_13> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_14> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_14> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_15> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_15> 
+INFO:Xst:2261 - The FF/Latch <pwm/countleft_16> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <pwm/countright_16> 
+INFO:Xst:2261 - The FF/Latch <csb/count_0> in Unit <Top> is equivalent to the following 3 FFs/Latches, which will be removed : <pwm/countleft_0> <pwm/countright_0> <bt/seg_fp_0> 
+INFO:Xst:2261 - The FF/Latch <csb/count_1> in Unit <Top> is equivalent to the following 3 FFs/Latches, which will be removed : <pwm/countleft_1> <pwm/countright_1> <bt/seg_fp_1> 
+INFO:Xst:2261 - The FF/Latch <csb/count_2> in Unit <Top> is equivalent to the following 3 FFs/Latches, which will be removed : <pwm/countleft_2> <pwm/countright_2> <bt/seg_fp_2> 
+INFO:Xst:2261 - The FF/Latch <csb/count_3> in Unit <Top> is equivalent to the following 3 FFs/Latches, which will be removed : <pwm/countleft_3> <pwm/countright_3> <bt/seg_fp_3> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 271
+ Flip-Flops                                            : 271
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1539
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 288
+#      LUT2                        : 44
+#      LUT3                        : 54
+#      LUT4                        : 73
+#      LUT5                        : 120
+#      LUT6                        : 179
+#      MUXCY                       : 415
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 352
+# FlipFlops/Latches                : 271
+#      FD                          : 97
+#      FDR                         : 150
+#      FDRE                        : 24
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 4
+#      OBUF                        : 34
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             269  out of  126800     0%  
+ Number of Slice LUTs:                  769  out of  63400     1%  
+    Number used as Logic:               769  out of  63400     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    840
+   Number with an unused Flip Flop:     571  out of    840    67%  
+   Number with an unused LUT:            71  out of    840     8%  
+   Number of fully used LUT-FF pairs:   198  out of    840    23%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    210    18%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 259   |
+bt/seg_fp_clk                      | NONE(bt/bl_En)         | 12    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 13.266ns (Maximum Frequency: 75.380MHz)
+   Minimum input arrival time before clock: 7.865ns
+   Maximum output required time after clock: 2.103ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.266ns (frequency: 75.380MHz)
+  Total number of paths / destination ports: 943678597 / 451
+-------------------------------------------------------------------------
+Delay:               13.266ns (Levels of Logic = 54)
+  Source:            csb/turnleft_count_0 (FF)
+  Destination:       csb/En_negedge (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: csb/turnleft_count_0 to csb/En_negedge
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.478   0.933  csb/turnleft_count_0 (csb/turnleft_count_0)
+     LUT5:I0->O            1   0.124   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_lut<0> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<0> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<1> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<2> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<3> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<4> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<5> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<5>)
+     MUXCY:CI->O           4   0.334   0.556  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_22_o_cy<6> (csb/turnleft_count[31]_GND_4_o_LessThan_22_o)
+     LUT6:I4->O            1   0.124   0.000  csb/Mmux_n0143_rs_lut<0> (csb/Mmux_n0143_rs_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  csb/Mmux_n0143_rs_cy<0> (csb/Mmux_n0143_rs_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<1> (csb/Mmux_n0143_rs_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<2> (csb/Mmux_n0143_rs_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<3> (csb/Mmux_n0143_rs_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<4> (csb/Mmux_n0143_rs_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<5> (csb/Mmux_n0143_rs_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<6> (csb/Mmux_n0143_rs_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<7> (csb/Mmux_n0143_rs_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<8> (csb/Mmux_n0143_rs_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<9> (csb/Mmux_n0143_rs_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<10> (csb/Mmux_n0143_rs_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<11> (csb/Mmux_n0143_rs_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<12> (csb/Mmux_n0143_rs_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<13> (csb/Mmux_n0143_rs_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<14> (csb/Mmux_n0143_rs_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<15> (csb/Mmux_n0143_rs_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<16> (csb/Mmux_n0143_rs_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<17> (csb/Mmux_n0143_rs_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<18> (csb/Mmux_n0143_rs_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<19> (csb/Mmux_n0143_rs_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<20> (csb/Mmux_n0143_rs_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<21> (csb/Mmux_n0143_rs_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<22> (csb/Mmux_n0143_rs_cy<22>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<23> (csb/Mmux_n0143_rs_cy<23>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mmux_n0143_rs_cy<24> (csb/Mmux_n0143_rs_cy<24>)
+     XORCY:CI->O           4   0.510   0.939  csb/Mmux_n0143_rs_xor<25> (csb/n0143<25>)
+     LUT5:I0->O            1   0.124   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_27_o_lut<5> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_27_o_lut<5>)
+     MUXCY:S->O            1   0.472   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_27_o_cy<5> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_27_o_cy<5>)
+     MUXCY:CI->O          62   0.334   0.580  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_27_o_cy<6> (csb/turnleft_count[31]_GND_4_o_LessThan_27_o)
+     LUT6:I5->O            3   0.124   0.933  csb/Mmux_n0145110 (csb/n0145<0>)
+     LUT5:I0->O            1   0.124   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_lut<0> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<0> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<1> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<2> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<3> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<4> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<5> (csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<5>)
+     MUXCY:CI->O          34   0.334   0.689  csb/Mcompar_turnleft_count[31]_GND_4_o_LessThan_31_o_cy<6> (csb/turnleft_count[31]_GND_4_o_LessThan_31_o)
+     LUT5:I3->O            2   0.124   0.925  csb/Mmux_turnleft_count[31]_turnleft_count[31]_mux_33_OUT25 (csb/turnleft_count[31]_turnleft_count[31]_mux_33_OUT<10>)
+     LUT5:I0->O            1   0.124   0.000  csb/Mcompar_n0055_lut<0> (csb/Mcompar_n0055_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  csb/Mcompar_n0055_cy<0> (csb/Mcompar_n0055_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_n0055_cy<1> (csb/Mcompar_n0055_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_n0055_cy<2> (csb/Mcompar_n0055_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  csb/Mcompar_n0055_cy<3> (csb/Mcompar_n0055_cy<3>)
+     MUXCY:CI->O          29   0.365   0.551  csb/Mcompar_n0055_cy<4> (csb/Mcompar_n0055_cy<4>)
+     FDR:R                     0.494          csb/turnleft_count_0
+    ----------------------------------------
+    Total                     13.266ns (7.160ns logic, 6.106ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'bt/seg_fp_clk'
+  Clock period: 2.122ns (frequency: 471.254MHz)
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Delay:               2.122ns (Levels of Logic = 2)
+  Source:            bt/seg_data_0 (FF)
+  Destination:       bt/seg_data_0 (FF)
+  Source Clock:      bt/seg_fp_clk rising
+  Destination Clock: bt/seg_fp_clk rising
+
+  Data Path: bt/seg_data_0 to bt/seg_data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.478   0.945  bt/seg_data_0 (bt/seg_data_0)
+     LUT6:I0->O            1   0.124   0.421  bt/data[7]_PWR_5_o_select_37_OUT<8>1 (bt/data[7]_PWR_5_o_select_37_OUT<8>)
+     LUT6:I5->O            1   0.124   0.000  bt/data[7]_PWR_5_o_select_37_OUT<8>2 (bt/data[7]_PWR_5_o_select_37_OUT<0>)
+     FD:D                      0.030          bt/seg_data_0
+    ----------------------------------------
+    Total                      2.122ns (0.756ns logic, 1.366ns route)
+                                       (35.6% logic, 64.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 63726 / 202
+-------------------------------------------------------------------------
+Offset:              7.865ns (Levels of Logic = 11)
+  Source:            Rx (PAD)
+  Destination:       bt/data_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Rx to bt/data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   0.001   0.687  Rx_IBUF (Rx_IBUF)
+     LUT2:I0->O            9   0.124   0.972  bt/Mmux_EnRead_PWR_5_o_MUX_181_o11 (bt/EnRead_PWR_5_o_MUX_181_o_inv_inv)
+     LUT6:I1->O            4   0.124   0.441  bt/fp[19]_GND_5_o_equal_10_o<19>1 (bt/fp[19]_GND_5_o_equal_10_o<19>1)
+     LUT5:I4->O            1   0.124   0.000  bt/fp[19]_GND_5_o_equal_10_o<19>2_G (N35)
+     MUXF7:I1->O           2   0.368   0.427  bt/fp[19]_GND_5_o_equal_10_o<19>2 (bt/fp[19]_GND_5_o_equal_10_o<19>2)
+     LUT6:I5->O            4   0.124   0.796  bt/fp[19]_GND_5_o_equal_7_o<19>21 (bt/fp[19]_GND_5_o_equal_7_o<19>2)
+     LUT6:I2->O            5   0.124   0.743  bt/fp[19]_GND_5_o_equal_10_o<19>3 (bt/fp[19]_GND_5_o_equal_10_o)
+     LUT4:I1->O            1   0.124   0.536  bt/_n0115_SW0 (N28)
+     LUT6:I4->O            5   0.124   0.966  bt/_n0115 (bt/_n0115)
+     LUT6:I0->O            2   0.124   0.782  bt/fp[19]_data[7]_select_14_OUT<0>11 (bt/fp[19]_data[7]_select_14_OUT<0>11)
+     LUT5:I1->O            1   0.124   0.000  bt/fp[19]_data[7]_select_14_OUT<1>1 (bt/fp[19]_data[7]_select_14_OUT<6>)
+     FD:D                      0.030          bt/data_6
+    ----------------------------------------
+    Total                      7.865ns (1.515ns logic, 6.350ns route)
+                                       (19.3% logic, 80.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 26 / 17
+-------------------------------------------------------------------------
+Offset:              2.086ns (Levels of Logic = 2)
+  Source:            csb/En (FF)
+  Destination:       led<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: csb/En to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             125   0.478   0.949  csb/En (csb/En)
+     LUT6:I2->O           22   0.124   0.535  Mmux_led21 (led_1_OBUF)
+     OBUF:I->O                 0.000          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      2.086ns (0.602ns logic, 1.484ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'bt/seg_fp_clk'
+  Total number of paths / destination ports: 14 / 11
+-------------------------------------------------------------------------
+Offset:              2.103ns (Levels of Logic = 2)
+  Source:            bt/bl_En (FF)
+  Destination:       led<1> (PAD)
+  Source Clock:      bt/seg_fp_clk rising
+
+  Data Path: bt/bl_En to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.478   0.966  bt/bl_En (bt/bl_En)
+     LUT6:I0->O           22   0.124   0.535  Mmux_led21 (led_1_OBUF)
+     OBUF:I->O                 0.000          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      2.103ns (0.602ns logic, 1.501ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock bt/seg_fp_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+bt/seg_fp_clk  |    2.122|         |         |         |
+clk            |    3.607|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+bt/seg_fp_clk  |    2.574|         |         |         |
+clk            |   13.266|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.25 secs
+ 
+--> 
+
+Total memory usage is 4686600 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   58 (   0 filtered)
+Number of infos    :   33 (   0 filtered)
+
